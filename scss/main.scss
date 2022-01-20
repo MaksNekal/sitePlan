@@ -1,0 +1,222 @@
+@import "_nullstyle.scss";
+
+$font-family_quick-sand: 'Quicksand', sans-serif;
+$font-family_roboto: 'Roboto', sans-serif;
+$font-family_open-sans: 'Open Sans', sans-serif;
+
+$color-title: #3D4F9F;
+$color_paragraph: #8D96BD;
+
+@mixin fonts-style($color,$weight,$font-size,$font-family,$letter-spacing,$line-height){ 
+    font-size: $font-size;
+    font-weight: $weight;
+    font-family: $font-family;
+    color: $color;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+h1{
+    @include fonts-style($color-title, 300, 3rem, $font-family_quick-sand, 0 , normal);
+
+    & span{
+        font-weight: 500;
+    }
+}
+
+h2{
+    @include fonts-style($color-title, 500, 2.25rem, $font-family_quick-sand, 0,normal)
+    
+}
+
+h3{
+    @include fonts-style($color-title, 500, 1.5rem, $font-family_quick-sand, 0, normal)
+}
+
+h4{
+    @include fonts-style(#4074F8, 700, 0.875rem, $font-family_open-sans, 0, 1.17em);
+    
+}
+
+h5{
+    @include fonts-style($color-title, 500, 0.625rem, $font-family_roboto, 00.01em, normal)
+}
+
+
+p{
+    @include fonts-style($color_paragraph, 400, 0.9375rem, $font-family_roboto, 00.03em, 1.91em)
+}
+
+
+
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 1.1875rem 0;
+    margin: 0 auto; 
+    max-width: 75.375em;
+}
+
+.menu{
+    display: flex;
+    margin-left: 73px;
+    
+    & li{
+        margin-right: 2.625rem;
+
+        &:last-child{
+            margin-right: 0;
+        }
+        .active{
+            @include fonts-style(#5E81FE, 700 , 0.75rem, $font-family_quick-sand, 0.05em, normal)
+        }
+    }
+
+    & a{
+         @include fonts-style(#697CA6, 500 , 0.75rem, $font-family_quick-sand, 0.05em, normal)
+    }
+}
+
+.social-network {
+    margin-left: auto;
+    margin-right: 44px;
+    
+
+    & a{
+        margin-right: 35px ;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.link__get-start {
+    background-color:  #D2E1FF;
+    border-radius: 0.125rem;
+    padding: 0.8125rem 0.9375rem;
+    @include fonts-style(#3A79FF, 700 , 0.8125rem, $font-family_quick-sand, 0, normal)    
+}
+
+
+.header-slider {
+    background-color: #F4F7FF;
+    max-width: 100%;
+}
+
+.slider{
+    height: 570px;   
+}
+
+.slider__item {
+    position: relative;
+    height: 570px;
+
+    .background-chart {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 465px / 570px * 100%;
+    }
+
+.offer{
+    text-align: center;
+    padding-top: 92px;
+    padding-bottom: 284px;
+    
+    & p{
+        width: 502px;
+        margin: 28px auto 0;
+    }
+}
+
+    &::before{
+        content:"";
+        width: 52px;
+        height: 52px;
+        background-color: #fff;
+        border-radius: 25px;
+        position: absolute;
+        left: 48.5%;
+        top: 50%;
+        
+    }
+
+    .header-elment {
+        position: absolute;
+        top: 69%;
+        left: 29.85%;
+    }
+    
+}
+
+.cloud {
+
+		&_1 {
+            position: absolute;
+            top: 150px;
+		}
+
+		&_2 {
+            position: absolute;
+            top: 45px;
+            left: 15%;
+		}
+
+		&_3 {
+            position: absolute;
+            top: 360px;
+            left: 18%;
+		}
+		
+
+		&_4 {
+            position: absolute;
+            top: -10px;
+            left: 80%;
+		}
+		
+
+		&_5 {
+            position: absolute;
+            top: 430px;
+            left: 70%;
+		}
+		
+
+		&_6 {
+            position: absolute;
+            top: 310px;
+            right: 0;
+		}
+}
+
+.list-company {
+    padding: 58px 276px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan-manage {
+    background: #F5F8FF;
+}
+
+.block-plan {
+    display: flex;
+    margin-left: 230px / 1440px * 100%;;
+    padding-top: 171px;
+    align-items: center;
+
+.information{
+
+    & p{
+        width: 413px ;
+    }
+
+}
+
+}
+
+.block-plan__img {
+    max-width: 653px;
+}
